@@ -1,0 +1,77 @@
+:root {
+  --bg: #f7f9fc;
+  --card: #fff;
+  --accent: #007acc;
+}
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+  margin: 0;
+  background: var(--bg);
+  color: #0b1530;
+}
+.container {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px 48px;
+}
+header {
+  background: linear-gradient(90deg, #e9f2ff, #f7fbff);
+  padding: 24px 16px;
+  margin-bottom: 12px;
+}
+.lead {
+  margin: 4px 0 0;
+  color: #334;
+}
+.controls {
+  margin-bottom: 12px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+.card {
+  background: var(--card);
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(10, 20, 40, 0.06);
+}
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button.delete {
+  background: #cc3d3d;
+}
+button.edit {
+  background: #f08a24;
+}
+label {
+  display: block;
+  margin: 8px 0;
+}
+input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #d0d8e6;
+  width: 100%;
+}
+.form-section {
+  margin-top: 18px;
+}

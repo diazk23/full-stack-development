@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS & DOM</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Person Management System</h1>
+      <p class="lead">
+        Full-stack app with Express REST API and SQLite database
+      </p>
+    </header>
+
+    <main class="container">
+      <div
+        id="loading"
+        style="display: none; text-align: center; padding: 1rem; color: #666"
+      >
+        Loading...
+      </div>
+
+      <section class="controls">
+        <label>
+          Search:
+          <input id="search" placeholder="Search by name or email" />
+        </label>
+      </section>
+
+      <section>
+        <h2>People</h2>
+        <div id="peopleList" class="grid"></div>
+      </section>
+
+      <section class="form-section">
+        <h2>Add a Person</h2>
+        <form id="addPersonForm">
+          <label>
+            Name:
+            <input name="name" required="true" />
+          </label>
+          <label>
+            Age:
+            <input name="age" type="number" min="0" required="true" />
+          </label>
+          <label>
+            Email:
+            <input name="email" type="email" required="true" />
+          </label>
+          <label id="rolesLabel" style="display: none">
+            Roles:
+            <select
+              name="roles"
+              id="rolesSelect"
+              multiple
+              size="3"
+              required
+            ></select>
+          </label>
+          <button type="submit">Add Person</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Template for a person card. We'll clone this in JS -->
+    <template id="person-template">
+      <div class="card">
+        <h3 class="person-name"></h3>
+        <p class="person-age"></p>
+        <p class="person-email"></p>
+        <p class="person-roles"></p>
+        <div class="card-actions">
+          <button class="edit">Edit</button>
+          <button class="delete">Delete</button>
+        </div>
+      </div>
+    </template>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

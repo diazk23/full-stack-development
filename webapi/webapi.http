@@ -1,0 +1,44 @@
+@webapi = http://localhost:3001
+
+###
+GET {{webapi}}/api/people
+
+
+### 
+GET {{webapi}}/api/people?search=alice
+
+
+###
+GET {{webapi}}/api/people/mll4b99ihly5
+
+
+###
+GET {{webapi}}/api/people/mll4b99ihlyx
+
+
+###
+PUT {{webapi}}/api/people/mll4b99i3hho
+Content-Type: application/json
+
+{
+    "id": "mll4b99i3hho",
+    "name": "Ben Thompson",
+    "age": 38,
+    "email": "ben.t@example.com"
+}
+
+
+###
+
+POST {{webapi}}/api/people
+Content-Type: application/json
+
+{
+    "name": "Brian Dietrick",
+    "age": 52,
+    "email": "brian.d@example.com"
+}
+
+
+###
+DELETE {{webapi}}/api/people/mlpek5exktlg
